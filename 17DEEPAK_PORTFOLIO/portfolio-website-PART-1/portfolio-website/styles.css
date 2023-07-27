@@ -1,0 +1,752 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap"); /*y hamne font family import ki h */
+
+*{
+  margin:0;
+  padding:0;
+  /* box-sizing:border-box;     isko krne se jo hamare icon h section wale vo 1 line m 4 hi aare the lekin hamko 5 chahie the 1 line m islie y property ko remove krdiya then hamare bhi 1 line m 5icon aane lage*/
+  font-family: "Be Vietnam Pro", sans-serif; /* y rahi hamrai font family*/
+  scroll-behavior: smooth;
+}
+:root {
+  --bgOrange: #e84949;
+}
+
+#wrapper{
+    height:100vh;        /*hamare jo display ki size h vo le lega (page ki height bhi bol skte hai */
+    overflow-y:auto;     /* ham y direction m scroll krna chahte hai*/
+    overflow-x: hidden;  /* ham x direction m scroll nahi krna chahte*/
+}
+
+.container{
+    width:1200px;
+     margin:0 auto;      /*CONTAINER KO BICH M PLACED KRNE K LIE LIKHI Y PROPERTY
+                         [margin:0 MEAN TOP,BOTTOM SE O MARGIN AND margin:AUTO MEAN LEFT,RIGHT SE BARABAR MARGIN LE LEGA ]  */
+}
+
+.navbar{
+    display: flex;  /*  MUJHE NAVBAR KO VERTICAL M SIDE M LE JANA HAI ISLIE DISPLAY KO FLEX KIYA */
+    justify-content:space-between; /*MUJHE NAVBAR KO EK DUM KONE M LE JANA HAI CONTAINER K THEN Y PROPERTY LGAYI  HAI  */
+    align-items:center; /* MUJHE VERTICALLY BHI CENTER CHAHIE ISLIE MENE Y PROPERTY LAGAYI */
+
+    padding-top:1rem;
+}
+
+  .logo{   /*logo ko chota krne k lie y pura block likha h  */
+    width:80px;  /* isme hame height isliw nahi dalni padi kyuki jo logo ka parent hoga uske hisab se automatic height squiz ho gyi*/
+    
+}
+.d{
+  font-style: bold;
+  font-size: 50px;
+}
+
+.logo-container{
+     display:flex;  /*MUJHE J WALA LOGO OR ohn Doe single line m aae/horizontal line m aae , islie mene display flex kiya */
+     /* justify-content: baseline; */
+     align-items: center; /*ohn Doe ko J LOGO k center m lane k lie likha hai  */
+}
+ 
+ .logo-text{
+     margin-left:-0.2rem; /*ohn Doe ko logo k pas lane k lie y property lagayi hai */
+     font-size:28px; /*ohn Doe ka font size badane k lie y property likhi h */
+}
+
+.nav-items{
+     display:flex; /*jo hamare nav-items the unko 1 vertical line m lane k lie likhi y property  */
+     gap:2rem;   /*hamare jo nav-items h unke bich m gap k lie y property likhi  */
+     padding: 0 4em; /*top bottom se padding:0 lega ,and right, left se padding 4em lega  */
+}
+
+ .nav-items div{          /* nav-item k ander jo hamare div h un pr y property apply hogi  */
+    font-size:20px;      /*font size ko increase kiya  */
+    font-weight:530;         /*bold krne k lie y property lagagyi gyi*/
+     cursor:pointer;        /* m chahta hu ki jese hi m anchor tag (mtlb bookmarks) pr jau hath wala symbol aae uske lie y property lagayi hai  */
+     
+}
+ .nav-items div a{     /*nav-items k andar div k andar a h uspr y property apply hogi  */
+    color: black;    /*jo hamari anchor tag(bookmark) bol raha hu usko black krne k lie y lagayi  */
+    
+} 
+
+a{
+     text-decoration: none; /*m chahta hu anchor tag k niche hamari underline aari h vo remove ho jae uske lie mene y property lagayi h*/
+      
+}
+
+
+.nav-items div:hover{
+    transition:0.8s;             /*y hamara transition time h ki jese hi ham nav-items m div pr jae hamara transition hone m 0.8s (second) le*/
+    font-weight: bold;
+}
+
+
+                
+                     /* CSS OF NAVIGATION BAR IS COMPLETED HERE (ABOVE ALL THE CSS ARE OF NAVIGATION BAR) */
+
+
+
+
+
+
+
+.hero-section{
+    position:relative;    /*MUJHE AAGE JAAKR OVERLAP KRVANA H ISLIE NEAREST ANCESTER - RELATIVE KIYA */
+    display:flex;         /*MERA JO HERO-SECTION-RIGHT HAI USKO RIGHT M LE JANA H ISLIE FLEX KIYA HMANE */
+    justify-content: center; /*MAIN AXIS (HORIZONTALLY) CENTER M ALIGNMENT KR DEGA(ALIGNMENT MEAN PLACED KRDEGA) */
+    align-items: center;    /*CROSS AXIS(VERTICALLY) CENTER M ALIGNMENT KRDEGA (ALIGNMENT MEAN PLACED KR DEGA)
+
+    gap: 5rem;  /*MUJHE GAP CHAHIE */
+    margin: 4rem auto; /*4rem(TOP-BOTTOM SE 4rem MARGIN AAEGI),auto(LEFT-RIGHT M BARABAR MARGIN AA JAEGI)*/
+    padding: 0 1rem;  /*TOP-BOTTOM M 0 PADDING AA JAEGI,RIGHT-LEFT M 1rem padding aa jaegi*/
+    padding-bottom: 8rem; /*bottom se 8rem padding aa jaegi*/
+}
+
+.faded-text{
+      position: absolute;/* Y PROPERTY LAGANE K BAD HUMNE JO NICHE LIKHA H BOTTOM ,LEFT M VALUE VO ENABLE HOGI OR HAMARA JOHN DOE NICHE CHALA JAEGA*/
+    user-select:none;  /*ISS PROPERTY SE M TEXT KO SELECT YA COPY NAHI KR SKTA */
+    font-size: 4em;
+    color:rgb(231,231,231);
+    
+    bottom: -11%;
+    left: -5%;
+    font-weight: bold;
+    transition: all 3s;
+}
+
+.hero-section-left{
+    /* width:100%; */
+    display: flex;
+    flex-direction: column; /*HAM CHAHTE H HAMARE ITEMS NICHE KI OR GIRE*/
+    justify-content:center; /* MAIN AXIS (HORIZONTALLY) CENTER M ALIGNMENT KR DEGA(ALIGNMENT MEAN PLACED KRDEGA) */
+    gap: 2rem;
+}
+
+.hero-section-heading{
+    font-size: 35px;
+    color: #343d68;
+    font-weight: 500;   /*BOLD KRNE K LIE USE KIYA*/
+}
+
+.role{
+    color: #4e45d5;    /*JO TEXT MERA MOVE KR RAHA USKA COLOR BLUE H ISLIE  */
+    font-weight: 800;  /*BOLD KRNE K LIE USE KIYA*/
+}
+
+.hero-section-sub-heading{
+    font-size: 45px;
+    line-height: 45px;
+}
+
+.hero-section-description{
+    margin-top: 1rem;
+    width: 70%;
+    font-weight: 500;
+}
+
+.btn-pink {
+  background-color: var(--bgOrange);
+  width: fit-content;
+  color: white;
+  padding: 0.8rem 2.3rem;
+  box-shadow: 5px 5px 7px 0px #0000003f;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.5s;
+  font-weight: 500;
+  border: solid 3px transparent;
+  position: relative;
+  z-index: 1;
+}
+.btn-pink::before {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  top: 0px;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.8s;
+}
+.btn-pink:hover::before {
+  transform: scaleX(1);
+}
+.btn-pink:hover {
+  border: solid 3px var(--bgOrange);
+  color: black;
+}
+
+  .hero-section-right{
+    position:relative;      /*HAME AAGE OVERLAP KRVANA H ISLIE HAMNE Y PROPERTY LAGYI*/
+  }
+
+  .absolute{
+    position:absolute;         /*ISSE MERI MAIN IMAGE K UPR BAKI IMAGE OVERLAP KR JAEGI*/
+  }
+
+  .user-image{
+    padding:2.5rem;
+     filter:grayscale(1);  /*ISSE HAMARI IMAGE BLACK AND WHITE HO JAEGI*/ 
+    transition:all 1s;
+    animation: scaleImage 5s linear infinite;  /*scaleimage (hamare animation ka name h jo hum kuch bhi de skte hai),5s(5s ki duration m choti badi hogi image),linear m hogi ,infinite times se hoti rahegi*/
+    /*jb bhi animation ki baat krte h to hamne ek terms padi thi that is keyframes*/
+  }
+
+  .user-image img{
+    z-index:-9;  /* m chahta hu jo meri userimage ko chodkr jo meri baki image h vo (userimage k niche chip gyi) 
+                  agar m chahta hu usko userimage k upr krna then yahi property lagyi*/ 
+  }
+
+  @keyframes scaleImage { /*kis prakar se animate krvana h animation ko vo likha h */
+
+    0%{
+        filter:grayscale(0);
+        transform:scale(1);
+        
+    }
+
+    50%{
+        transform:scale(1.1);
+        filter:grayscale(1);
+        box-shadow: 3px 3px 10px black;
+    }
+
+    100%{
+      
+        transform:scale(1);
+        filter:grayscale(0);
+    }
+    
+  }
+
+
+  .icon-dots{           /*AB HUM ICON-DOTS WALI IMAGE KO ANIMATE KRWAENGE */
+    z-index:9;       /*HAME ICON-DOTS WALI IMAGE JO H USKO USERIMAGE K UPR CHAHIE (HAMNE USERIMGAE KA Z-INDEX = -9 KIYA THA ) , AB HAME ICON-DOTS WALI IMAGE KO USERIMAGE K UPR LANA H TO (Z-INDEX=9) DE DENGE */
+    bottom:-1rem;   /* JO HAMARI ICON-DOTS WALI IMAGE USKO NICHE BOTTOM M PLACE KRNA H */
+    right:0;        /*ICON-DOTS IMAGE KO SAHI JAGAH PLACED KRNE K LIE HI LAGAYI GYI H */
+    animation-name:dotsAnimation; /* Y HAMNE ANIMATION-NAME DIYA H */
+    animation-duration: 5s;     /*KITNE TIME M HAMARA ANIMATION STARTING SE ENDING TK KHATAM HOGA*/
+    animation-iteration-count: infinite; /*KITNI BAR HAMARE ANIMATION KO CHALANE HAI*/
+  }
+
+  @keyframes dotsAnimation { /*JO HAMARA ICON-DOTS H VO KIS PRAKAR SE ANIMATE KRNA CHAHIE VO LIKHA HAMNE KEYFRAMES K THROUGH*/
+    0%{
+        transform:translateY(0px);        /*KISI BHI CHEEJ KO MOVEMENT KRBVANA H TO TRANSLATE KA USE KRENGE HUM*/
+    }
+    50%{
+        transform: translateY(-15px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+    
+  }
+
+ .icon-cube{                 /*AB HUM ICON-CUBE WALI IMAGE KO ANIMATE KRWAENGE */
+    z-index:9;               /*USERIMAGE K UPR LANA THA ISLIE Z-INDEX USE KIYA */
+    top:-0.8em;             /*Y HAMNE ICON-CUBE KI POSITION SET KI HAI*/
+    right:1em;              /*Y HAMNE ICON-CUBE KI POSITION SET KI HAI*/
+    animation-name: cubeRotate;    /* Y HAMNE ANIMATION-NAME DIYA H */
+    animation-duration: 3s;         /*KITNE TIME M HAMARA ANIMATION STARTING SE ENDING TK KHATAM HOGA*/
+    animation-iteration-count: infinite;  /*KITNI BAR HAMARE ANIMATION KO CHALANE HAI*/
+  }
+
+  @keyframes cubeRotate {               /*JO HAMARA ICON-CUBE H VO KIS PRAKAR SE ANIMATE KRNA CHAHIE VO LIKHA HAMNE KEYFRAMES K THROUGH*/
+    0%{                                                   /*ISME MOVEMENT K SATH ROTATE BHI HO RAHA HAI */
+        transform: rotateY(0deg) translateY(0px);            /*HAM IS PRAKAR SE 1HI CHEEJ KI 2 PROPERTY BHI LAGA SKTE HAI*/
+    }
+    50%{
+        transform:  rotateY(180deg) translateY(-12px);
+    }
+    100%{
+        transform:  rotateY(360deg) translateY(0px);
+    }
+  }
+
+   .icon-circle{                  /*AB HUM ICON-CIRCLE WALI IMAGE KO ANIMATE KRWAENGE */
+    z-index:9;                    /*USERIMAGE K UPR LANA THA ISLIE Z-INDEX USE KIYA */
+    left:0;                       /*Y HAMNE ICON-CIRCLE KI POSITION SET KI HAI*/
+    bottom:0;                     /*Y HAMNE ICON-CIRCLE KI POSITION SET KI HAI*/
+    animation-name:shakeEffect;   /* Y HAMNE ANIMATION-NAME DIYA H */
+    animation-duration: 6s;       /*KITNE TIME M HAMARA ANIMATION STARTING SE ENDING TK KHATAM HOGA*/
+    animation-timing-function: linear;     /*LINEAR TARIKE SE CHLEGI*/
+    animation-iteration-count: infinite;   /*KITNI BAR HAMARE ANIMATION KO CHALANE HAI*/
+} 
+ @keyframes shakeEffect {          /*JO HAMARA ICON-CIRCLE H VO KIS PRAKAR SE ANIMATE KRNA CHAHIE VO LIKHA HAMNE KEYFRAMES K THROUGH*/
+  
+    50%{
+        left:5%;                 /*YEH HAMNE POSITION KRVA DI KI 50% PR LINEAR TARIKE SE MOVE KRNA CHAHIE */
+        bottom:10%;
+    }
+ 
+  }
+
+  .icon-zigzag{                            /*AB HUM ICON-ZIGZAG WALI IMAGE KO ANIMATE KRWAENGE */
+    z-index:9;
+    top:1.5em;
+    left:-0.3em;
+    animation:zigzagAnimation 5s ease-in infinite;
+  }
+
+  @keyframes zigzagAnimation{
+    50%{
+        left:5%;
+        top:2%;
+    }
+  }
+
+  .icon-plus{               /*AB HUM ICON-PLUS WALI IMAGE KO ANIMATE KRWAENGE */
+    z-index:9;
+    top:-0.8rem;
+    left: 50%;
+    animation:shakeEffectPlus 5s ease-in infinite;
+  }
+
+  @keyframes shakeEffectPlus {
+    50%{
+        top:3%;
+        left:48%
+    }
+  } 
+
+  /* HERE START CSS OF PROJECT CARDS */
+   .project-section{
+    background-color: rgb(231,231,231);
+    margin-top:4rem;
+  }
+
+  .page-header{
+    color:var(--bgOrange); /*Y HAMNE GLOBAL VARIABLE BANA RAKHA H UPR */
+    font-size:90px;      /*THIS IS OUR FONT SIZE*/
+    text-align:center;   /*HAMARI JO PROJECT HEADING H USKO CENTER KRNE K LIE*/
+    padding-top:30px;    /*UPR SE PADDING LE LI HAMNE */
+  }
+  .project-container{
+    max-width: 1200px;
+    margin:0 auto; /*TOP OR BOTTOM SE 0 MARGIN LEGA AND LEFT OR RIGHT SE AUTO (MTLB BARABAR MARGIN LEGA JISSE BICH M HAMARA CONTENT AAE*/
+    padding:3rem 0;/*TOP OR BOTTOM SE 3REM PADDING LEGA AND LEFT OR RIGHT SE 0 PADDING LEGA */
+
+    display:flex; /*HAME EK K NICHE EK CARD CHAHIE CAHRO CARD KO*/
+    flex-direction:column; /*ISI PROPERTY SE 1 K NICHE 1 HONGE CARD LEKIN ISS PROPERTY KO USE KRNE K LIE HAME PEHLE FLEX BANANA HOGA */
+    gap:120px; /*HAME CARDS K BICH M GAP BHI CHAHIE ISLIE Y PROPERTY LAGAYI*/
+  }
+
+  .project-card{
+    width:90%;           /*HAMARE CARD KI WIDTH 90% HOGI*/
+    height:550px;       /* OR JO HEIGHT H JISME CHARO CARD AAENGE HAMARE USKI HEIGHT 550P HOGI */
+    background-image: url(./images/projects/Project1.png);  /*BACKGROUND IMAGE HAMARI PROJECT 1 WALI*/
+    background-size: cover;  /*BACKGROUNG PURI NHAI AARI THI HAMARE CONTAINER ,AGAR HAM CHAHTE H ,HAMARI PURI BACKGROUND IMAGE AAAE JITNA HAMARA CONTAINER H USI M THEN HAMNE YEH PROPERTY LAGAYI*/
+   
+    position:relative;  /*AAGR HAM OVERLAP KRVANA H ISLIE POSITION RELATIVE KRDI*/
+    box-shadow:0px 0px 40px #1f1f1f; /*HAMARE CARD K AAS PASS SHADOW AARI THI VO LAGAYI HAMNE*/
+  }
+
+  .project-card::after{
+    content:"";                /*y mujhe hamesha batana padta h ki content dalna h y nahi psedoselector me(hum content dalna nahi chahte islie hamne nahi daala */
+    position:absolute;        /*mujhe .project-card k upr .project-card::after ko overlap krvana h islie position:absolute kiya */
+    top:0;                  /*top:0 ,left:0,right:0,bottom:0 yah sb islie kiya kyuki mujhe puri project-card m jo image h usko */
+    left:0;                 /* gherni (cover) krni */
+    right:0;
+    bottom:0;
+    background-color: #1f1f1f9a;    /*HERE WE APPLY UPER SE GHRNE WALA(COVER WALA) BACKGROUND COLOR(COLOR CODE K LAST M 9a LIKHA H VO OPACITY K LIE DALA HAI*/
+    transform: scaleX(1);
+    z-index:0;
+    
+  }
+
+  .project-card::before{
+    content:"";
+    position:absolute;
+    top:0;                /*top:0 ,left:0,right:0,bottom:0 yah sb islie kiya kyuki mujhe puri project-card par jo image h usko */
+    left:0;                /* gherni (cover) krni mtlb jo hamara blue color ka tilt left se aara h usko hamare projrct card pr hi to lagana hai*/
+    right:0;
+    bottom:0;
+    background: linear-gradient(45deg, #343d68, #343d68be, #343d687c); /*hamne color bataya konse color ka tilt hover pr lagana hai*/
+    transform:scaleX(0);                   /*HAME TO HOVER PR BLUE TILT CHAHIE UPR SE STARTING M TO KUCH NHI CHAHIE ISLIE SCALEX(0) KIYA */
+    transform-origin: left;      /*HAME LEFT SE TILT CHAHIE JESA HAMARE BUTTON M AARA THA */
+    transition: all 0.4s;
+    z-index:1;                  /*HAMARA JO COLOR THA BLUE VO SAHI SE NHI AARA THA USKO SAHI KRNE K LIE USE KIYA Z-INDEX*/
+  }
+
+  .project-card:hover::before{
+    transform:scaleX(1);                  /*JESE HI HAMARA HOVER HOGA BLUE TILT VISIBLE HO JAEGA (HAMARA BEFORE WALI PROPERTY HIT HO JARGI*/
+  }
+
+  .project-number{
+    position:absolute;     /*HAME PROJRCT NUMBER KO HAMARE CARD K UPR OVERLAP KRVANA H ISLIE LAGAYI HAMNE Y PROPERTY*/
+    font-size:200px;       /*HAMARE NUMBER KA FONT SIZE*/
+    font-weight:600;       /*HAMARE NUMBER KI BOLDNESS*/
+    color:white;         /*HAMARA JO NUMBER H VO WHITE COLOR KA HAI*/
+    z-index:10;
+    /*display: none;   ham chahte h jo hamara number h vo na dikhe hamko islie lagayi y property*/
+   
+    opacity: 0;     /*ham chahte h jo hamara number h vo sirf hover pr dikhe ase normal nhi dikhe islie iss property se hamara number nahi dikhega*/
+  }
+
+  .project-card:hover .project-number{
+    
+    opacity: 1;        /*jese hi ham hover krenge hamare .project-number ki opacity 1 ho jaegi mtlb visible ho jaega hamara number kyuki opacity hamari 1 h islie */
+  }
+
+  .project-number-right{
+    right:-40px;
+    top:-45px;
+  }
+
+  .project-number-left{
+    left:-40px;
+    top:-45px;
+  }
+
+  .project-content{
+    position:absolute;   /*JO HAMARA CONTENT H USKO OVERLAP KRVANA H*/
+    display:flex;        /*HAME JO 4 CHIJO PR KAAM KRNA H VO 1 K NICHE 1 AARI H ISLIE DISPLAY FLEX BANAYA BECAUSE I HAVE TO SET FLEX-DIRECTION:COLUMN;*/
+    flex-direction:column; /*HAME JIN 4 CHEEJO PR KAAM KRNA H CO 1 K NICHE 1 AARI H ISLIE Y PROPERTY LAGAYI H HAMNE*/
+    color:white;  /*HAME JIN CHEEJO PR KAAM KRNA UNKA TEXT-COLOR :WHITE H*/
+    padding:2em; /*CONTENT KO SAHI JAGAH PLACED KRNE K LIE DESINGNER BATATA H*/
+    bottom:20%; /*CONTENT KO SAHI JAGAH PLACED KRNE K LIE DESINGNER BATATA H*/
+    z-index:5; /* ISLIE DI KYUKI HAME ISE LAYERING SE UPR LANA HOGA */
+    gap:1em;   /*JIN 4 CHEEJ PR KAAM KRNE WALE H UNKE BICH M GAP H */
+    transition:all 0.4s; /*smooothly hamaara content scale ho hover pr islie y property lagayi hamne*/
+    padding-left: 6em;
+  }
+
+
+  .project-content-left{ 
+    left:10%;                     /*HAMARE 1 AND 3 KA CONTENT LEFT M AARA ISLIE HAMNE CLASS BANAKR PLACED KRDIYA LEFT M*/
+  }
+
+  .project-content-right{ 
+    right:10%;                   /*HAMARE 2 AND 4 KA CONTENT RIGHT M AARA ISLIE HAMNE CLASS BANAKR PLACED KRDIYA RIGHT M */
+  }
+
+  .project-skills-container{       /*HAM YAHA PR HAMARE CARDS M JO ICON H UNKI BAAT KR RAHE H */
+    width:60%;                     /*HAMNE UNKI WIDTH SET KI KYUKI KUCH ICON NICHE WALI LINE M BHI AA RAHE H*/
+    display:flex;                  /*HAME ICONS KO HORIZONTAL PLACED KRVANA THA ISLIE HAMNE DISPLAY:FLEX KIYA*/
+    gap:10px;                     /* ICON K BICH M GAP 10 PC KA HOGA*/
+    flex-wrap:wrap;                /*JESE HI HAMARI 60% WIDTH HAMARE ICON LE LENGE OR KUCH ICON BACHE RAHENGE TO VO NICHE WALI LINE M AA JAENGE*/
+  
+  }
+
+  .project-skill{
+    width:40px;                 /*JO HAMARE ICON THE VO BAHUT BADE THE UNKO CHOTA KRNE K LIE Y PROPERTY LAGAYI HAI*/
+  }
+
+  .project-heading{            /*TINT AND ORANGE KI BAAT HORI H YAHA HAMARI */
+    font-size:50px;
+    font-weight: bold;
+    line-height:3rem;
+  }
+  
+  .project-subHeading{         /*HEADING K LIE WALE TEXT KI BAAT HORI H*/
+    width:70%;                 /*KUCH TEXT NEXT LINE M AARA THA IT MEANS WIDTH KAM HOGI ISLIE WIDTH SET KI */
+    font-size:16px;            /*THIS IS OUR FONT SIXE OF SUB HEADING*/
+    font-style: italic;        /*JO HAMARE TEXT THE VO ITALIC M THE TO VO KIYA HAMNE*/
+  }
+
+
+  .btn-grp{
+    display:flex;             /*hame GAP or CENTER m placed krne the icon islie hamne flex banaya*/
+    gap:0.9rem;               /*yaha hamne gap di hai */
+    align-items: center;      /*yaha hamne center krdiya h*/
+    
+  }
+
+  .btn-project:hover{
+    border:none;            /*hamara jo button h uspr border aari thi jb ham hover kr rahe then vo underline hatane k lie use kiya y hamne*/
+  }
+
+  .icon{
+    cursor:pointer;        /*jese hi hum icon pr jate hath wala symbol aajata vo iss line se aara hai */
+    color:white;         /*icon ka jo color h hamara vo white h */
+    font-size:35px;         /*this is our icon font size*/
+    transition:all 0.4s;    /*hover krte hi hamara jo orange color aara tha icon pr vo jerk sa aara tha usko smooth krne k lie y transition property lagayi hamne */
+  }
+
+  .icon:hover{
+    color:var(--bgOrange);  /*icon pr hover krke orange type color aaega */
+  }
+
+  .project-card:hover .project-content{
+    transform:scale(1.1);               /*yaha hamne bola h ki jese hi m card pr hover kru to jo mera .project content usko scale krdena*/
+  }
+
+  #project1{
+    background-image: url(./images/projects/Project1.png);
+  }
+
+  #project2{
+    margin-left:120px;
+    background-image: url(./images/projects/Project2.png);
+  }
+  #project3{
+    background-image: url(./images/projects/Project3.png);
+  }
+  #project4{
+    margin-left:120px;
+    background-image: url(./images/projects/Project4.png);
+  }
+
+  @media (max-width:1300px) {
+    .page-header {                            /*media query k through hamne responsive kiya*/
+      padding-top: 30px;
+      color: var(--bgOrange);
+      text-align: center;
+      font-size: 40px;
+    }
+    .project-container {
+      padding: 5px;
+      margin: 10px;
+      gap: 60px;
+    }
+    .project-card {
+      width: 100%;
+      height: 300px;
+    }
+    .project-card {
+      background-size: cover;
+      background-position: center;
+    }
+    .project-content {
+      scale: 0.5;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+    }
+    .project-content-left {
+      left: 0;
+    }
+    .project-heading {
+      font-size: 40px;
+      width: 100%;
+    }
+    .project-sub-heading {
+      width: 100%;
+    }
+    #project2 {
+      margin-left: 0;
+    }
+    #project4 {
+      margin-left: 0;
+    }
+    .project-skill-container {
+      width: 100%;
+    }
+    .project-skill {
+      width: 35px;
+    }
+    .project-card:hover .project-number {
+      display: none;
+    }
+    .project-card:hover .project-content {
+      scale: 0.55;
+    }
+  }                                              /*yaha tak hamne media query lagayi h*/
+
+
+
+  /*HERE START SKILLS SECTION CSS*/
+  .skills-container{
+    position:relative;
+    display:flex;
+    padding:5rem;
+    margin:10rem auto;
+    gap:30px;
+  }
+
+.skill-container-left{    /*Y HUM LEFT WALE SECTION KI BAAT KR RAHE H SKILL M*/
+  width:50%;              /*LEFT CONTAINER JO H VO 50%WIDTH LELEGA*/
+  display:flex;           /*YAHA 1 K NICHE 1 CHEEJ AARI H ISLIE HAM FLEX USE KRNA HOGA*/
+  flex-direction:column;   /*EK K NICHE 1 K LIE Y PROPERTY USE KI HAMNE */
+}
+
+.skill-container-right{        /*Y HUM RIGHT WALE SECTION KI BAAT KR RAHE H SKILL M*/
+  display:flex;               /*HAM CHAHTE H JO HAMARE ICONS H VO HORIZONTAL M AAE ISLIE */
+  flex-wrap:wrap;             /*50%WIDTH K BAD JITNE CONTENT 1 HORIZONTAL LINE M NAHI AA PAE TO BAKI ICONS NICHE WALI LINE M PLACED HONGE*/
+  width:50%;                  /*Y CONTAINER BHI HAMARA 50%LEGA*/
+  position:relative;          /*ISLIE KI KYUKI BAD M ISKE UPR KISI OR CHEEJ KO OVERLAP KRVANA HOGA*/
+  gap: 5rem;              
+  justify-content: center;   /*CENTER M LANE K LIE*/
+  height: 20rem;
+  padding-top: 10%;
+  
+}
+.skill-container-right img{
+  width: 21%;
+  height: 46%;
+} 
+
+.skill-fade-text{
+  position:absolute;    /*Y HAMNE POSITION ABSOLUTE KIYA KYUKI HAMKO SKILL KO SAHI JAGAH PLACD KRNA */
+  font-size:13em;       
+  font-style:bold;
+  color:rgb(231,231,231);
+  bottom:-34.5%;            /*Y BOTTOM OR RIGHT TB HI USE KR PAENGE JB HUM POSITION ABSOLUTE KRENGE */
+  right: -5%;               /* SAHI JAGAH PLACED KRNE K LIE LAGAYI Y PROPERTY*/
+  user-select:none;         /*HUM CHAHTE H USER SELECT NA KR PAE ISLIE Y HAMNE USE KIYA */
+  overflow-y:hidden;
+}
+
+.blob-style{
+  position:absolute;         /*hame blob ko icons k upr lanan h islie lagayi y property*/
+  top:50%;
+  left:50%;
+  z-index:-5;               /*hame blob ko icon k piche chahie islie z-index ka use kiya (layering wali game)*/
+  transform:translate(-50%, -50%);
+  animation: blobAnimate 3s linear infinite;  /*animation krvaya h it means keyframes ka use krna hoga aage humko*/
+}
+
+@keyframes blobAnimate {            /*blobAnimate ko animate krvaya with the help of keyframes */
+  50%{
+    top:54%;
+    left:46%;
+  }
+}
+
+.skills-logo{
+  width:90px;
+  
+  transition:all 0.5s; /*FOR SMOOTHNESS*/
+}
+
+.skills-logo:hover{
+  transform:scale(1.2);    /*HOVER PR ICON BADE HONGE HAMARE*/
+}
+
+.skill-heading{          /*me and mytech stack likha h uske uor kaam kiya hai */
+  font-size:50px;
+  font-style: bold;
+  color: var(--bgOrange);
+  line-height: 50px;
+}
+
+.caps{
+  font-size:90px;  /*yaha hamane M ka size badaya hai*/
+}
+
+.skill-subHeading{
+  margin-top: 1rem;
+  width:85%;
+  text-align: justify;        /*y ek bar notes se recall krna padega */
+}
+
+.skill-subHeading p{       /*YAHA HAMNE PARAGRAPH KO SET KIYA HAI*/
+  margin:15px 0;
+} 
+
+
+
+ .contactus-form-container{
+  width:100%;                        /*HAMARI JO WIDTH H VO 100% H */
+  background-color: rgb(231,231,231); /*PURI 100% WIDTH PR GREY BACKGROUND AARA HAI*/
+}
+
+.contactus-heading{           /*CONTACT ME HEADING KO SET KIYA H HAMNE */
+  font-size:5em;
+  color:var(--bgOrange);
+  padding-top: 2rem;
+}
+
+.contactus-sub-heading{
+  font-size:3rem;              /* CONTACT ME K NICHE WALE KO SET KIYA HAMNE*/
+  color:#343d68aa;           /*Y SUBHEADING KA COLOR H*/
+  text-transform: capitalize;  /*AGAR HAM CHAHTE H KI WORD KA FIRST LETTER SABHI JAGAH CAPITAL HO SUB-HEADING ISLIE HAMNE Y USE KIYA */
+}
+
+.contactus-form-container{
+  margin-top:25px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form{
+  display:flex;    /*HAM CHAHTE H JO HAMARI FORM FIELD H VO 1 K NICHE 1 AAE ISLIE HAME FLEX DIRECTION PROPERTY SET KRNI HOGI OR USI KO SET KRNE K LIE HAME PEHLE DISPLAY FLEX KRNI HOGI THEN HI HUM SET KR PAAENGE*/
+  flex-direction: column;  /*Y HAMNE SET KRDI FLEXDIRECTION ISSE HAMARI FORM FIELD 1 K NICHE 1 AAEGI*/
+  gap:30px;   /*FORM FIELD K BICH M GAP CHAHIE THA */
+  width:70%;
+  margin: 2rem 5rem;
+}
+
+.formfield-container{
+  width:100%;
+}
+
+.formfield{
+  width:100%;             /*FORM FIELD KI JO WIDTH H VO 100% HO*/
+  height:42px;           /*HAM CHAHTE H JO FORM FIELD KI HEIGHT H VO 42PX HO*/
+  padding: 0 2rem;
+  font-size:18px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px #1f1f1f;
+  font-weight:500;
+  border:none;   /*HAMARE FORMFIELD M BORDER AA RAHI THI HAME BORDER NAHI CHAHIE THI ISLIE HAMNE BORDER NONE KIYA */
+  margin-top:27px;
+}
+
+.formfield-textarea{     /*HAMARE FORMFIELD M TEXTAREA KRKE BHI EK FIELD HAI ,HAMNE ISKE JUST UPR USKI HEIGHT 42PX KRDI THI */
+  height:auto;         /*HAM YAHA PR CHAHATE H JO HAMARI TEXTFIELD H VO 42PX NA LEKR USKE PEHLE JO ROWS AND COLS THE HTML M VO LE ISLIE HEIGHT AUTO KRFI */
+  padding-top:1rem;
+}
+
+#submit-btn{
+  border:none;        /*HAME BORDER NAHI CHAHIE ISLIE HAMNE Y USE KIYA HAI*/
+  font-size: 1.4rem;
+  margin: 1rem 0;
+}
+
+#submit-btn:hover{
+  scale:0.9;
+}
+
+.submit-icon{             /*HAME ICON OR SEND MESSAGE JO LIKHA USKE BICH M SPACE CHAHIE THODI ISLIE Y 2 PROPERTY SET KI H HAMNE*/
+  padding:0 1rem;
+  font-size:1.5rem;
+}
+
+footer{
+  position:relative;  /*HAME AAGE JAKR FADED TEXT KO OVERLAP KRVANA PADEGA ISLIE SET KI*/
+  margin-top:-1px;
+  background-color: #343d68;
+  padding:5rem;
+}
+
+.footer-wrapper{
+  display:flex;  /*FLEX BANAYA H */
+  gap:1rem;
+  padding:1.2rem;
+  justify-content: space-between; /*HAM CHAHTE H JO ICON H OR JO HAMARE HYPERLINK H VO DUR DUR AAE ISLIE Y SET KIYA*/
+  align-items:center; /*THIS IS FOR CENTER*/
+} 
+
+.footer-faded-text{
+  position:absolute;     /*FADED TEXT KO OVERLAP KRVAYA*/
+  left:0;                /*POSITION BATAYI FADED TEXT KI HAMNE */
+  bottom:0;              /*POSITION BATAYI FADED TEXT KI HAMNE */
+  color:#535c87;       /*FADED TEXT KA COLOR DIYA H HAMNE */
+  user-select:none;     /*USER SELECT NA KR PAE ISLIE Y PROPERTY DI H*/
+  font-size:3em;
+}
+
+.link-wrapper{
+  display:flex;    /*HAME HYPERLINK K BICH M GAP CHAHIE THI ISLIE FLEX BANA DIYA*/
+  gap:1.2rem;      /*Y GAP DE DI HAMNE */
+}
+
+.link-wrapper div a{
+  color:white;           /*JO HAMARE HYPERLINK H UNKA COLOR WHITE H*/
+  
+  transition:all 0.6s;     /*HAM SMOOTH TRANSITION CHAHTE H ISLIE */
+}
+
+.link-wrapper div a:hover{    /*HYPERLINK HOVER PR COLOR ORANGE HOGA HAMARA*/
+  color:var(--bgOrange);
+}
+
+.icon-wrapper{
+  display:flex;     /*HAME GAP DENI THI ISLIE FLEX BANAYA */
+  gap:1rem;         /*Y HAMNE GAP SET KRDI */
+} 
